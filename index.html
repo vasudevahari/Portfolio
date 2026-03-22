@@ -479,107 +479,6 @@
             transform: scale(1.1);
         }
 
-        /* PROJECTS - Better spacing and full-width clickable links */
-        .projects-grid {
-            display: block;
-        }
-
-        .project-card {
-            background: var(--surface);
-            border: 2px solid var(--border);
-            border-radius: 16px;
-
-            display: flex;
-            flex-direction: column;
-
-            width: 100%;
-            padding: 32px;
-            margin-bottom: 24px;
-
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-
-            transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-
-        .project-card:hover {
-            transform: translateY(-4px);
-            border-color: var(--accent-purple);
-            box-shadow: 0 16px 48px rgba(168, 85, 247, 0.3);
-            background: var(--surface-2);
-        }
-
-        .project-index {
-            font-family: 'Inter', monospace;
-            font-size: 11px;
-            letter-spacing: 0.15em;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .project-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 24px;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 16px;
-        }
-
-        .project-desc {
-            font-family: 'Inter', sans-serif;
-            font-size: 16px;
-            line-height: 1.7;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-        }
-
-        /* Tech stack with more spacing */
-        .project-tech {
-            font-family: 'Inter', sans-serif;
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--text-muted);
-            margin-top: 24px;
-            padding-bottom: 24px;
-            letter-spacing: 0.03em;
-            border-bottom: 1px solid var(--border);
-        }
-
-        /* Full-width clickable link */
-        .project-link-box {
-            margin-top: 24px;
-        }
-
-        .project-link-box a {
-            display: block;
-            width: 100%;
-            padding: 16px 0;
-            font-family: 'Inter', sans-serif;
-            font-size: 15px;
-            font-weight: 700;
-            color: var(--accent-purple);
-            text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: all 0.3s;
-        }
-
-        .project-link-box a:hover {
-            border-bottom-color: var(--accent-purple);
-            padding-left: 12px;
-            color: var(--accent-blue);
-        }
-
-        .project-arrow {
-            font-size: 16px;
-            margin-left: 8px;
-            transition: transform 0.3s;
-        }
-
-        .project-link-box a:hover .project-arrow {
-            transform: translate(6px, -6px);
-        }
-
         /* FOOTER */
         footer {
             max-width: 1200px;
@@ -789,27 +688,6 @@
             <div class="interest-item"><span class="interest-dot"></span>Automation Systems</div>
             <div class="interest-item"><span class="interest-dot"></span>Full-Stack Web Development</div>
             <div class="interest-item"><span class="interest-dot"></span>Backend Engineering</div>
-        </div>
-        <div style="height:48px"></div>
-        <div class="projects-grid reveal" id="projects-grid">
-            <div class="project-card" id="pricesnap-card">
-                <div class="project-content">
-                    <h3 class="project-title">PriceSnap</h3>
-                    <p class="project-desc">
-                        A product and service comparison web application. Compare prices across shopping platforms
-                        as well as ride-hailing services like Uber and Rapido. Simple interface for quick decisions.
-                        Backend APIs, data handling, and full-stack web development.
-                    </p>
-                    <p class="project-tech">
-                        React · Node · API · MongoDB
-                    </p>
-                </div>
-                <div class="project-link-box">
-                    <a href="https://blink-8jym.onrender.com" target="_blank">
-                        View Project <span class="project-arrow">↗</span>
-                    </a>
-                </div>
-            </div>
         </div>
     </section>
 
