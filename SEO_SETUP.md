@@ -5,8 +5,17 @@ This is a plain HTML site. Publish the repository root containing `index.html`,
 
 ## Set your public URL before publishing
 
-The repository does not identify a live URL. To avoid sending Google to an invented
-domain, canonical, Open Graph URL and sitemap generation are pending configuration.
+The configured live URL is https://vasudevahari.netlify.app/. Canonical metadata,
+Open Graph URL, structured data, robots.txt and sitemap.xml use this address.
+The original Google verification file is included at
+`google3b7702583b872784.html`. Publish it unchanged with the rest of the site.
+
+For the supplied verification file, open
+https://vasudevahari.netlify.app/google3b7702583b872784.html after deployment,
+then click **Verify** using the **HTML file** method in Google Search Console.
+Submit https://vasudevahari.netlify.app/sitemap.xml and inspect the homepage.
+The optional HTML-tag instructions below are an alternative verification method;
+you do not need them when the supplied HTML file verification succeeds.
 
 With Python 3 installed, run from the repository root:
 
