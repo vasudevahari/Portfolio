@@ -8,10 +8,10 @@ from pathlib import Path
 from urllib.parse import urlsplit, urlunsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-TITLE = "Vasudeva Hari Vury | AI Agent & Backend Developer"
+TITLE = "Vasudeva Hari Vury | Full Stack & AI Agent Developer"
 DESCRIPTION = (
-    "Vasudeva Hari Vury is a CSE (AI & Data Science) student building voice AI "
-    "agents, full-stack applications, secure APIs and database-backed workflows."
+    "Explore Vasudeva Hari Vury's developer portfolio: voice AI agents, Python backend "
+    "APIs, Next.js applications and Supabase-powered appointment booking workflows."
 )
 IMAGE = "https://raw.githubusercontent.com/vasudevahari/Portfolio/main/img.jpg"
 
