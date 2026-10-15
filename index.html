@@ -261,11 +261,7 @@
     .mobile-case-preview{display:none}
 
     /* Continuous, seamless technology ticker mirroring the intro marquee. */
-    .tech-strip{background:#1b2019;color:var(--paper);padding:58px 0 64px;border-top:1px solid rgba(217,242,126,.18);overflow:hidden}
-    .tech-strip-header{padding:0 var(--pad);margin-bottom:28px}
-    .tech-strip-kicker{font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
-    .tech-strip h2{font:600 clamp(29px,4vw,52px)/1.08 var(--display);letter-spacing:-.055em;margin:0}
-    .tech-strip h2 em{font-family:var(--serif);font-weight:400}
+    .tech-strip{background:#1b2019;color:var(--paper);padding:12px 0;border-top:1px solid rgba(217,242,126,.18);overflow:hidden}
     .tech-strip-track{overflow:hidden;width:100%}
     .tech-strip-rail{display:flex;width:max-content;animation:tech-marquee 85s linear infinite}
     .tech-strip-group{display:flex;align-items:stretch;gap:11px;padding-right:11px;flex:0 0 auto}
@@ -273,10 +269,8 @@
     .tech-strip-pill:hover{border-color:var(--accent)}
     .tech-strip-pill b{font:500 13px var(--sans);letter-spacing:.01em}
     .tech-strip-pill small{font:9px var(--mono);text-transform:uppercase;letter-spacing:.09em;color:#b4c39c;border-left:1px solid rgba(241,239,231,.25);padding-left:12px}
-    .tech-strip-foot{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:24px var(--pad) 0;color:#acb4a3;font:10px/1.5 var(--mono);letter-spacing:.04em}
-    .tech-strip-foot a{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
     @keyframes tech-marquee{to{transform:translateX(-50%)}}
-    @media(max-width:700px){.tech-strip{padding:45px 0 49px}.tech-strip h2{font-size:31px}.tech-strip-pill{padding:14px 15px}.tech-strip-pill b{font-size:12px}.tech-strip-pill small{font-size:8px}.tech-strip-foot{flex-wrap:wrap}}
+    @media(max-width:700px){.tech-strip{padding:10px 0}.tech-strip-pill{padding:14px 15px}.tech-strip-pill b{font-size:12px}.tech-strip-pill small{font-size:8px}}
     @media(prefers-reduced-motion:reduce){.tech-strip-track{overflow-x:auto;scrollbar-width:thin}.tech-strip-rail{animation:none}.tech-strip-group[aria-hidden="true"]{display:none}}
     /* SKILLS */
     .skills{background:var(--paper);color:var(--ink);padding:120px var(--pad) 160px}
@@ -506,13 +500,7 @@
     </section>
 
 
-    <section class="tech-strip" aria-labelledby="techStripTitle">
-      <div class="max">
-        <div class="tech-strip-header">
-          <p class="tech-strip-kicker">The tools behind the work / 29 technologies &amp; practices</p>
-          <h2 id="techStripTitle">Engineering <em>stack.</em></h2>
-        </div>
-      </div>
+    <section class="tech-strip" aria-label="Technology skills">
       <div class="tech-strip-track" role="region" aria-label="Continuously scrolling engineering skills">
         <div class="tech-strip-rail">
           <div class="tech-strip-group">
@@ -578,9 +566,6 @@
           <span class="tech-strip-pill"><b>Responsive UI</b><small>Frontend</small></span>
           </div>
         </div>
-      </div>
-      <div class="max">
-        <div class="tech-strip-foot"><span>CONTINUOUSLY SHOWCASING THE STACK &#8594;</span><a href="#expertise">Detailed technical toolkit &#8599;</a></div>
       </div>
     </section>
 
