@@ -410,6 +410,69 @@
     .architecture-foot{font:11px var(--mono);margin:25px 0 0;color:#7f90a9}
     @media(max-width:900px){.architecture-flow{grid-template-columns:1fr;gap:8px}.architecture-node{min-height:0;padding:17px}.architecture-node strong{margin:8px 0 3px}.architecture-connector{transform:rotate(90deg);line-height:1}.stack-status{align-items:flex-start;flex-direction:column;gap:13px}.stack-status p{max-width:none}.agent-architecture{padding:29px 24px}}
     @media(max-width:700px){.case-proof{margin-top:19px}.case-proof>span:last-child{font-size:11px}.agent-architecture{margin-top:47px}.architecture-top{margin-bottom:25px}.stack-status{margin-top:33px;padding:20px}.architecture-node strong{font-size:18px}}
+ 
+    /* Editorial engineering portfolio — refined system-wide treatment */
+    :root{--ink:#091426;--ink-soft:#112440;--paper:#f4f7fc;--paper-dim:#e7eef8;--accent:#95d2ff;--accent-dark:#438fd6;--muted:#a7b9d2;--pad:clamp(22px,5.1vw,100px)}
+    html{scroll-padding-top:88px}
+    body{font-kerning:normal;-webkit-font-smoothing:antialiased}
+    ::selection{background:#a9dfff;color:#07172d}
+    .nav{height:76px;border-bottom:1px solid rgba(199,223,251,.15)}
+    .nav.scrolled{box-shadow:0 8px 48px rgba(3,13,28,.18)}
+    .logo{letter-spacing:-.12em}
+    .nav-center a{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+    .nav-contact{border-radius:2px;letter-spacing:.03em}
+    .hero{min-height:min(940px,100svh);background:#08162a}
+    .hero-scene::before{filter:saturate(.58) hue-rotate(12deg) brightness(.63) contrast(1.18)}
+    .hero-vignette{background:linear-gradient(90deg,rgba(4,12,27,.94) 4%,rgba(5,15,30,.78) 47%,rgba(4,12,26,.28) 100%)}
+    .hero-grid{opacity:.12}
+    .hero-inner{padding-top:clamp(140px,15vh,210px)}
+    .hero-kicker{letter-spacing:.15em;font-size:10px}
+    .hero h1{font-size:clamp(72px,10vw,176px);letter-spacing:-.095em;line-height:.91;max-width:1000px}
+    .hero h1 em{color:var(--accent)}
+    .hero-sub{max-width:575px;font-size:clamp(14px,1.22vw,17px);line-height:1.85}
+    .hero-sub strong{color:#fff}
+    .hero-actions{margin-top:32px}
+    .button-primary{border-radius:2px}
+    .hero-portrait{filter:drop-shadow(0 30px 70px rgba(0,0,0,.38))}
+    .ticker{padding-block:17px;background:var(--accent)}
+    .ticker-unit{font-size:13px;letter-spacing:.1em}
+    .intro{background:var(--paper);padding-top:clamp(110px,13vw,190px);padding-bottom:clamp(100px,12vw,180px)}
+    .intro-heading{letter-spacing:-.09em;line-height:1.03}
+    .intro-under{margin-top:clamp(40px,6vw,90px)}
+    .intro-under p{line-height:1.85}
+    .pillar{transition:background .25s,transform .25s}
+    .pillar:hover{transform:translateY(-5px);background:rgba(85,144,209,.055)}
+    .tech-strip{background:#0d213b;padding:18px 0;border-color:#345376}
+    .tech-strip-pill{background:#132d4d;border-color:rgba(157,201,242,.23);padding:18px 23px}
+    .tech-strip-pill b{font-size:13px}
+    .tech-strip-pill small{color:#a6cae8}
+    .work{background:#0a182c}
+    .work-heading{letter-spacing:-.09em}
+    .work-description{line-height:1.85}
+    .case{transition:background .3s,border-color .3s,padding .3s}
+    .case.active{background:linear-gradient(100deg,rgba(69,121,178,.13),transparent 85%)}
+    .case h3{letter-spacing:-.055em}
+    .case p{line-height:1.8}
+    .stack-chips span{border-color:rgba(160,201,241,.26);color:#d8e5f5}
+    .scene-voice{background:radial-gradient(circle at 50% 20%,#335f94,#09192d 75%)}
+    .scene-booking{background:radial-gradient(circle at 50% 28%,#366c9d,#0b1d32 75%)}
+    .scene-data{background:radial-gradient(circle at 50% 28%,#465d94,#0b182c 75%)}
+    .project-scene::before{filter:saturate(.5) brightness(.75)}
+    .skills{background:var(--paper);padding-top:clamp(100px,11vw,170px)}
+    .skills h2{letter-spacing:-.095em}
+    .skill-row:hover{background:#e9f0fb}
+    .skill-tags span{border-radius:2px}
+    .agent-architecture{border-radius:3px;overflow:hidden}
+    .approach{background:#101f35}
+    .approach-title{letter-spacing:-.09em}
+    .method{transition:background .25s}
+    .method:hover{background:rgba(128,182,238,.07)}
+    .contact{background:#071324}
+    .contact::before{filter:saturate(.4) brightness(.55)}
+    .contact-title{letter-spacing:-.095em}
+    a:focus-visible,button:focus-visible{outline:2px solid #a9dfff;outline-offset:4px}
+    @media(max-width:700px){.nav{height:68px}.hero{min-height:780px}.hero-inner{padding-top:147px}.hero h1{font-size:clamp(66px,13vw,95px)}.hero-vignette{background:linear-gradient(90deg,rgba(4,12,27,.93),rgba(4,12,27,.64))}.tech-strip{padding:13px 0}.tech-strip-pill{padding:14px 16px}}
+    @media(prefers-reduced-motion:reduce){.pillar:hover{transform:none}}
   </style>
 </head>
 <body>
@@ -449,14 +512,14 @@
       <div class="noise" aria-hidden="true"></div>
       <div class="hero-inner max">
         <div>
-          <div class="hero-kicker eyebrow"><span class="cross" aria-hidden="true">✳</span> AI &amp; Data Science <span style="color:rgba(255,255,255,.48)">/</span> Agent &amp; backend developer <span class="demo-indicator">B.Tech · Year 3</span></div>
-          <h1 id="heroTitle"><span class="sr-only">Vasudeva Hari Vury — AI Agent &amp; Backend Developer. </span><span class="line">Building</span><span class="line">agents that</span><span class="line"><em>listen.</em></span></h1>
+          <div class="hero-kicker eyebrow"><span class="cross" aria-hidden="true">✳</span> SOFTWARE ENGINEERING <span style="color:rgba(255,255,255,.48)">/</span> AI SYSTEMS · BACKEND · PRODUCT</div>
+          <h1 id="heroTitle"><span class="sr-only">Vasudeva Hari Vury — AI Agent &amp; Backend Developer. </span><span class="line">Software</span><span class="line">that does</span><span class="line"><em>the work.</em></span></h1>
           <div class="hero-below">
             <div class="hero-sub">
-              <strong>Hi, I'm Vasudeva Hari Vury.</strong> I am a B.Tech CSE (AI &amp; Data Science) student focused on <strong>AI agent development, backend engineering and full-stack web applications.</strong> I build voice assistants that connect conversations to customer support and appointment booking workflows.
+              <strong>Vasudeva Hari Vury · Software &amp; AI Engineer.</strong> I design and build agent-powered applications, reliable backend services and considered interfaces. Current work spans real-time voice systems, authenticated APIs and transactional appointment workflows.
               <div class="availability"><span aria-hidden="true"></span>Open to internships &amp; project collaborations</div>
               <div class="hero-actions">
-                <a class="button-primary" href="#work">Explore my work <span class="arrow" aria-hidden="true">↗</span></a>
+                <a class="button-primary" href="#work">View selected projects <span class="arrow" aria-hidden="true">↗</span></a>
                 <a class="text-link" href="https://github.com/vasudevahari" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
               </div>
             </div>
@@ -480,7 +543,7 @@
       <div class="max">
         <div class="intro-top">
           <div class="eyebrow reveal">01 / The perspective</div>
-          <h2 class="intro-heading reveal delay-1" id="introTitle"><span class="sr-only">About me: </span>The best technology feels <em>human.</em> The best engineering is <em>invisible.</em></h2>
+          <h2 class="intro-heading reveal delay-1" id="introTitle"><span class="sr-only">About me: </span>Thoughtful systems.<br /><em>Purposeful software.</em></h2>
         </div>
         <div class="intro-under">
           <p class="reveal"><strong>I build customer support AI agents and appointment booking voice assistants.</strong> My ongoing Python and LiveKit projects connect speech-to-text, LLM tool calling and text-to-speech to authenticated database lookups, support tickets and scheduling workflows. They are local development prototypes, with source not yet published.</p>
@@ -493,7 +556,7 @@
         <div class="pillars">
           <article class="pillar reveal"><small>01 / INTELLIGENCE</small><h3>Agents with purpose.</h3><p>Natural conversations connected to useful tools and real workflows.</p></article>
           <article class="pillar reveal delay-1"><small>02 / ENGINEERING</small><h3>Systems built to last.</h3><p>Authenticated APIs, validated actions and sound data models.</p></article>
-          <article class="pillar reveal delay-2"><small>03 / EXPERIENCE</small><h3>Interfaces that make sense.</h3><p>Clear voice-session states and approachable, responsive interfaces.</p></article>
+          <article class="pillar reveal delay-2"><small>03 / INTERFACE</small><h3>Interfaces that make sense.</h3><p>Clear voice-session states and approachable, responsive interfaces.</p></article>
         </div>
       </div>
       <div class="vertical-note">CURIOUS BY DESIGN — RIGOROUS BY DEFAULT</div>
@@ -572,8 +635,8 @@
     <section class="work" id="work" aria-labelledby="workTitle">
       <div class="max">
         <div class="section-meta reveal"><span class="eyebrow">02 / Selected work</span><span class="right mono">2 ongoing builds · 1 completed portfolio</span></div>
-        <h2 class="work-heading reveal" id="workTitle"><span class="sr-only">Projects: </span>Ideas, made<br /><em class="serif">operational.</em></h2>
-        <p class="work-description reveal">Two AI agents developed locally, plus my public portfolio code. Agent prototypes are described from development work; their source is <strong>not currently published</strong>. The 3D panels are illustrative, not live screenshots.</p>
+        <h2 class="work-heading reveal" id="workTitle"><span class="sr-only">Projects: </span>Selected<br /><em class="serif">engineering.</em></h2>
+        <p class="work-description reveal">A focused selection of voice AI, backend workflows and interface engineering. The two agent systems are local prototypes, not production deployments; project visuals are illustrative.</p>
         <div class="showcase-layout">
           <div class="work-cases">
             <article class="case active" data-project="0">
@@ -655,7 +718,7 @@
       <div class="max">
         <div class="section-meta reveal"><span class="eyebrow">03 / Engineering toolkit</span><span class="right mono">Languages · frameworks · databases · APIs</span></div>
         <div class="skills-top">
-          <h2 class="reveal" id="skillsTitle"><span class="sr-only">Skills: </span>The stack behind<br /><em class="serif">the agents.</em></h2>
+          <h2 class="reveal" id="skillsTitle"><span class="sr-only">Skills: </span>Tools, chosen<br /><em class="serif">with intent.</em></h2>
           <p class="reveal delay-1">A technical inventory of tools I have used in public code and local agent builds, separated from frameworks I am still studying. Architecture and reliability come first.</p>
         </div>
         <div class="skills-list">
@@ -687,7 +750,7 @@
     <section class="approach" id="process" aria-labelledby="approachTitle">
       <div class="max">
         <div class="section-meta reveal"><span class="eyebrow">04 / How I work</span><span class="right mono">From voice request to verified action.</span></div>
-        <h2 class="approach-title reveal" id="approachTitle"><span class="sr-only">My development process: </span>Curiosity.<br />Clarity.<br /><em class="serif">Craft.</em></h2>
+        <h2 class="approach-title reveal" id="approachTitle"><span class="sr-only">My development process: </span>Discover.<br />Design.<br /><em class="serif">Deliver.</em></h2>
         <div class="method-grid">
           <article class="method reveal"><div class="number">STEP 01 / 04</div><div class="symbol">✳</div><h3>Understand</h3><p>Map the user request to a safe and useful agent capability.</p></article>
           <article class="method reveal delay-1"><div class="number">STEP 02 / 04</div><div class="symbol">◇</div><h3>Architect</h3><p>Model tool contracts, authentication, state and validation rules.</p></article>
@@ -700,7 +763,7 @@
     <section class="contact" id="contact" aria-labelledby="contactTitle">
       <div class="max" style="width:100%">
         <div class="eyebrow reveal">05 / Get in touch</div>
-        <h2 class="contact-title reveal" id="contactTitle"><span class="sr-only">Contact Vasudeva Hari: </span>Have an idea?<br />Let's make it <em class="serif">real.</em></h2>
+        <h2 class="contact-title reveal" id="contactTitle"><span class="sr-only">Contact Vasudeva Hari: </span>Let’s build<br /><em class="serif">something useful.</em></h2>
         <div class="contact-main reveal">
           <!-- Email supplied in this GitHub profile and existing public Portfolio source. -->
           <a class="mail" href="mailto:vuryhari@gmail.com?subject=Portfolio%20enquiry">vuryhari@gmail.com <span aria-hidden="true">↗</span></a>
