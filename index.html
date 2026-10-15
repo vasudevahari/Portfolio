@@ -260,24 +260,24 @@
     /* One illustration per case on small screens; hidden on desktop. */
     .mobile-case-preview{display:none}
 
-    /* Compact skill showcase positioned immediately before selected projects. */
-    .tech-strip{background:#1b2019;color:var(--paper);padding:58px var(--pad) 64px;border-top:1px solid rgba(217,242,126,.18);overflow:hidden}
-    .tech-strip-header{display:flex;align-items:end;justify-content:space-between;gap:22px;margin-bottom:28px}
+    /* Continuous, seamless technology ticker mirroring the intro marquee. */
+    .tech-strip{background:#1b2019;color:var(--paper);padding:58px 0 64px;border-top:1px solid rgba(217,242,126,.18);overflow:hidden}
+    .tech-strip-header{padding:0 var(--pad);margin-bottom:28px}
     .tech-strip-kicker{font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
     .tech-strip h2{font:600 clamp(29px,4vw,52px)/1.08 var(--display);letter-spacing:-.055em;margin:0}
     .tech-strip h2 em{font-family:var(--serif);font-weight:400}
-    .tech-strip-controls{display:flex;gap:9px;flex-shrink:0}
-    .tech-strip-controls button{width:43px;height:43px;display:grid;place-items:center;background:transparent;border:1px solid rgba(241,239,231,.38);border-radius:50%;color:var(--paper);font:20px var(--sans);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-    .tech-strip-controls button:hover{background:var(--accent);color:var(--ink);border-color:var(--accent)}
-    .tech-strip-controls button:focus-visible,.tech-strip-track:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
-    .tech-strip-track{display:flex;align-items:stretch;gap:11px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:#829167 transparent;padding:6px 2px 19px;-webkit-overflow-scrolling:touch}
-    .tech-strip-pill{display:flex;align-items:center;gap:12px;white-space:nowrap;flex:0 0 auto;border:1px solid rgba(241,239,231,.22);background:#252c22;padding:17px 20px;scroll-snap-align:start;transition:border-color .2s,transform .2s}
-    .tech-strip-pill:hover{border-color:var(--accent);transform:translateY(-2px)}
+    .tech-strip-track{overflow:hidden;width:100%}
+    .tech-strip-rail{display:flex;width:max-content;animation:tech-marquee 85s linear infinite}
+    .tech-strip-group{display:flex;align-items:stretch;gap:11px;padding-right:11px;flex:0 0 auto}
+    .tech-strip-pill{display:flex;align-items:center;gap:12px;white-space:nowrap;flex:0 0 auto;border:1px solid rgba(241,239,231,.22);background:#252c22;padding:17px 20px;transition:border-color .2s}
+    .tech-strip-pill:hover{border-color:var(--accent)}
     .tech-strip-pill b{font:500 13px var(--sans);letter-spacing:.01em}
     .tech-strip-pill small{font:9px var(--mono);text-transform:uppercase;letter-spacing:.09em;color:#b4c39c;border-left:1px solid rgba(241,239,231,.25);padding-left:12px}
-    .tech-strip-foot{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:8px;color:#acb4a3;font:10px/1.5 var(--mono);letter-spacing:.04em}
+    .tech-strip-foot{display:flex;justify-content:space-between;gap:15px;align-items:center;margin:24px var(--pad) 0;color:#acb4a3;font:10px/1.5 var(--mono);letter-spacing:.04em}
     .tech-strip-foot a{color:var(--accent);text-decoration:underline;text-underline-offset:4px}
-    @media(max-width:700px){.tech-strip{padding:45px var(--pad) 49px}.tech-strip-header{align-items:end;gap:12px}.tech-strip h2{font-size:31px}.tech-strip-controls button{width:38px;height:38px}.tech-strip-pill{padding:14px 15px}.tech-strip-pill b{font-size:12px}.tech-strip-pill small{font-size:8px}.tech-strip-foot{flex-wrap:wrap}}
+    @keyframes tech-marquee{to{transform:translateX(-50%)}}
+    @media(max-width:700px){.tech-strip{padding:45px 0 49px}.tech-strip h2{font-size:31px}.tech-strip-pill{padding:14px 15px}.tech-strip-pill b{font-size:12px}.tech-strip-pill small{font-size:8px}.tech-strip-foot{flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){.tech-strip-track{overflow-x:auto;scrollbar-width:thin}.tech-strip-rail{animation:none}.tech-strip-group[aria-hidden="true"]{display:none}}
     /* SKILLS */
     .skills{background:var(--paper);color:var(--ink);padding:120px var(--pad) 160px}
     .skills .section-meta .eyebrow{color:#59603f}
@@ -509,16 +509,13 @@
     <section class="tech-strip" aria-labelledby="techStripTitle">
       <div class="max">
         <div class="tech-strip-header">
-          <div>
-            <p class="tech-strip-kicker">The tools behind the work / 29 technologies &amp; practices</p>
-            <h2 id="techStripTitle">Engineering <em>stack.</em></h2>
-          </div>
-          <div class="tech-strip-controls" aria-label="Scroll technologies">
-            <button type="button" id="techScrollBack" aria-label="Scroll skills left">&#8592;</button>
-            <button type="button" id="techScrollNext" aria-label="Scroll skills right">&#8594;</button>
-          </div>
+          <p class="tech-strip-kicker">The tools behind the work / 29 technologies &amp; practices</p>
+          <h2 id="techStripTitle">Engineering <em>stack.</em></h2>
         </div>
-        <div class="tech-strip-track" id="techStripTrack" tabindex="0" role="region" aria-label="Scrollable list of engineering skills">
+      </div>
+      <div class="tech-strip-track" role="region" aria-label="Continuously scrolling engineering skills">
+        <div class="tech-strip-rail">
+          <div class="tech-strip-group">
           <span class="tech-strip-pill"><b>Python</b><small>Language</small></span>
           <span class="tech-strip-pill"><b>TypeScript</b><small>Language</small></span>
           <span class="tech-strip-pill"><b>JavaScript</b><small>Language</small></span>
@@ -548,8 +545,42 @@
           <span class="tech-strip-pill"><b>pip / uv</b><small>Tooling</small></span>
           <span class="tech-strip-pill"><b>Python testing</b><small>Quality</small></span>
           <span class="tech-strip-pill"><b>Responsive UI</b><small>Frontend</small></span>
+          </div>
+          <div class="tech-strip-group" aria-hidden="true">
+          <span class="tech-strip-pill"><b>Python</b><small>Language</small></span>
+          <span class="tech-strip-pill"><b>TypeScript</b><small>Language</small></span>
+          <span class="tech-strip-pill"><b>JavaScript</b><small>Language</small></span>
+          <span class="tech-strip-pill"><b>SQL</b><small>Language</small></span>
+          <span class="tech-strip-pill"><b>C</b><small>Language</small></span>
+          <span class="tech-strip-pill"><b>Java</b><small>Language</small></span>
+          <span class="tech-strip-pill"><b>Next.js</b><small>Framework</small></span>
+          <span class="tech-strip-pill"><b>React</b><small>Frontend</small></span>
+          <span class="tech-strip-pill"><b>Tailwind CSS</b><small>Styling</small></span>
+          <span class="tech-strip-pill"><b>HTML5</b><small>Frontend</small></span>
+          <span class="tech-strip-pill"><b>CSS3</b><small>Styling</small></span>
+          <span class="tech-strip-pill"><b>Node.js</b><small>Backend</small></span>
+          <span class="tech-strip-pill"><b>Express</b><small>Backend</small></span>
+          <span class="tech-strip-pill"><b>REST APIs</b><small>API</small></span>
+          <span class="tech-strip-pill"><b>Python services</b><small>Backend</small></span>
+          <span class="tech-strip-pill"><b>LiveKit Agents</b><small>Voice AI</small></span>
+          <span class="tech-strip-pill"><b>LiveKit Cloud</b><small>Voice AI</small></span>
+          <span class="tech-strip-pill"><b>LLM tool calling</b><small>AI agents</small></span>
+          <span class="tech-strip-pill"><b>STT / TTS</b><small>Voice AI</small></span>
+          <span class="tech-strip-pill"><b>Agent prompts</b><small>AI agents</small></span>
+          <span class="tech-strip-pill"><b>PostgreSQL</b><small>Database</small></span>
+          <span class="tech-strip-pill"><b>Supabase</b><small>Backend</small></span>
+          <span class="tech-strip-pill"><b>Supabase Auth</b><small>Authentication</small></span>
+          <span class="tech-strip-pill"><b>Row Level Security</b><small>Security</small></span>
+          <span class="tech-strip-pill"><b>Git &amp; GitHub</b><small>Tooling</small></span>
+          <span class="tech-strip-pill"><b>npm / pnpm</b><small>Tooling</small></span>
+          <span class="tech-strip-pill"><b>pip / uv</b><small>Tooling</small></span>
+          <span class="tech-strip-pill"><b>Python testing</b><small>Quality</small></span>
+          <span class="tech-strip-pill"><b>Responsive UI</b><small>Frontend</small></span>
+          </div>
         </div>
-        <div class="tech-strip-foot"><span>SWIPE / SCROLL TO EXPLORE THE STACK &#8594;</span><a href="#expertise">Detailed technical toolkit &#8599;</a></div>
+      </div>
+      <div class="max">
+        <div class="tech-strip-foot"><span>CONTINUOUSLY SHOWCASING THE STACK &#8594;</span><a href="#expertise">Detailed technical toolkit &#8599;</a></div>
       </div>
     </section>
 
@@ -715,13 +746,6 @@
         }
       });
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      const techTrack = document.getElementById('techStripTrack');
-      const scrollSkills = (direction) => {
-        if (!techTrack) return;
-        techTrack.scrollBy({left: direction * Math.min(460, techTrack.clientWidth * .8), behavior: prefersReducedMotion ? 'instant' : 'smooth'});
-      };
-      document.getElementById('techScrollBack')?.addEventListener('click', () => scrollSkills(-1));
-      document.getElementById('techScrollNext')?.addEventListener('click', () => scrollSkills(1));
       const nav = document.getElementById('nav');
       const progress = document.getElementById('scrollProgress');
       const hero = document.querySelector('.hero');
